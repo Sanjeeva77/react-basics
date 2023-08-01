@@ -13,7 +13,30 @@ import { NamedList } from './components/NamedList';
 import { StyleSheets } from './components/StyleSheets';
 import { Inline } from './components/Inline';
 import './myAppStyles.css'
-import styles from './myAppStyles.module.css'
+// import styles from './myAppStyles.module.css'
+import { Form } from './components/Form';
+import { FormDetail } from './components/FormDetail';
+import { FragmentDemo } from './components/FragmentDemo';
+import { Table } from './components/Table';
+import { FragmentList } from './components/FragmentList';
+import LifeCycleA from './components/LifeCycleA';
+import PureComp from './components/PureComp';
+import ParentComp from './components/ParentComp';
+import { FocusInput } from './components/FocusInput';
+import FRParentinput from './components/FRParentinput';
+import ErrorBoundary from './components/ErrorBoundary';
+import { Hero } from './components/Hero';
+import { PortalDemo } from './components/PortalDemo';
+import { RefDemo } from './components/RefDemo';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import User from './components/User';
+import ClickCounter2 from './components/ClickCounter2';
+import HoverCounter2 from './components/HoverCounter2';
+import CounterTwo from './components/CounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/UserContext';
+
 
 function App() {
   return (
@@ -42,9 +65,53 @@ function App() {
         {/* <ParentComponent/>
         <NamedList/> */}
         {/* <StyleSheets primary={false}/> */}
-        <Inline/> 
-        <h1 className='error'>Error</h1>
-        <h1 className={styles.success}>Success</h1>
+        {/* <Inline/>  */}
+        {/* <h1 className='error'>Error</h1>
+        <h1 className={styles.success}>Success</h1> */}
+        {/* <Form/> */}
+        {/* <FormDetail/> */}
+        {/* <FragmentDemo/> */}
+        {/* <Table/> */}
+        {/* <FragmentList/> */}
+        {/* <LifeCycleA/> */}
+        {/* <PureComp/> */}
+        {/* <ParentComp/> */}
+         {/* <refDemo/> */}
+        {/* <FocusInput/> */}
+        {/* <FRParentinput/> */}
+        {/* <ErrorBoundary>
+          <Hero heroName='Batman'/>
+          </ErrorBoundary>
+          <ErrorBoundary>
+          <Hero heroName='Spiderman'/>
+          </ErrorBoundary>
+          <ErrorBoundary>
+          <Hero heroName='Joker'/>
+        </ErrorBoundary> */}
+        {/* <PortalDemo/> */}
+        {/* <ClickCounter/>
+        <HoverCounter/> */}
+        {/* <ClickCounter2/>
+        <HoverCounter2/>
+        <User render={(isLoggedIn)=>isLoggedIn?'CGG':'Guest'}/> */}
+        {/* <CounterTwo>
+        {(count,incrementCount)=>
+          (<ClickCounter2 count={count}
+          incrementCount={incrementCount}/>
+          )}
+        </CounterTwo>
+
+        <CounterTwo>
+        {(count,incrementCount)=>
+          (<HoverCounter2 count={count}
+          incrementCount={incrementCount}/>
+          )}
+        </CounterTwo> */}
+        {/* 2. */}
+        <UserProvider value='CGG'> 
+          <ComponentC/>
+        </UserProvider>
+        
         </div>
   );
 }
